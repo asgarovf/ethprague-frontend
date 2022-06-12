@@ -44,16 +44,22 @@ const Navbar = ({
         active: pathname === PATHS.home,
       },
       {
-        name: "Swap",
+        name: "Dex Tool",
         url: PATHS.swap,
         soon: false,
         active: pathname.startsWith(PATHS.swap),
       },
       {
-        name: "Market",
+        name: "Marketplace tool",
         url: PATHS.market,
         soon: false,
         active: pathname.startsWith(PATHS.market),
+      },
+      {
+        name: "Lending tool",
+        url: "#",
+        soon: true,
+        active: pathname.startsWith("#"),
       },
     ];
   }, [pathname]);
