@@ -1,9 +1,7 @@
 import styles from "./Navbar.module.scss";
-import { useTheme } from "hooks/useTheme";
 import { useMemo, useRef, useState } from "react";
 import { clsnm } from "utils/clsnm";
 import { FaBars, FaCopy, FaTimes } from "react-icons/fa";
-import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { PATHS } from "constants/paths";
 import { Link, useLocation } from "react-router-dom";
 import { Button, Container, Modal } from "ui";
@@ -173,6 +171,7 @@ const Navbar = ({
                     setTimeout(() => {
                       if (videoRef.current) {
                         videoRef.current.style.opacity = "0";
+                        setVideo(false);
                       }
                     }, 17000);
                   }}
